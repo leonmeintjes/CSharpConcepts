@@ -22,7 +22,7 @@ namespace CSharpConcepts
             Console.WriteLine($"This guy2 is called {ThisConstruct2.Name}");
             Console.WriteLine($"This guy2 is {ThisConstruct2.Age} years old");
 
-            //Default Ctroncutor - Method 2
+            //Default Constructor - Method 2
             ClassConstructors ThisConstruct3 = new ClassConstructors()
             {
                 Age = 22, Name = "Sannie Vanderskoor"
@@ -30,6 +30,8 @@ namespace CSharpConcepts
             };
             Console.WriteLine($"This guy3 is called {ThisConstruct3.Name}");
             Console.WriteLine($"This guy3 is {ThisConstruct3.Age} years old");
+
+
 
             Console.ReadLine();
 
