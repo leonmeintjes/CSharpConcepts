@@ -31,6 +31,16 @@ namespace CSharpConcepts
             Console.WriteLine($"This guy3 is called {ThisConstruct3.Name}");
             Console.WriteLine($"This guy3 is {ThisConstruct3.Age} years old");
 
+            //Non static methods - (Does not have the word static and must be instantiated before use)
+            //Called from the instance of a class
+            StaticAndNonStaticMethods ReturnTheAnswer = new StaticAndNonStaticMethods();
+            double thisAnswer = ReturnTheAnswer.NonStaticMethod("200");
+            Console.WriteLine("This non static answer is " + thisAnswer );
+            
+            //Static methods - (has the word static and can be called without instantiating the class) 
+            //Called directly from the class
+            double thirdAnswer = StaticAndNonStaticMethods.StaticMethod("200");
+            
 
 
             Console.ReadLine();
