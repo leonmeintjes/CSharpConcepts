@@ -44,12 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassConstructors.cs" />
+    <Compile Include="CollectionsArraysListsDictionaries.cs" />
+    <Compile Include="Document.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="IRecording.cs" />
+    <Compile Include="IStorable.cs" />
+    <Compile Include="Memo.cs" />
     <Compile Include="MethodOverloading.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyTypes.cs" />
     <Compile Include="StaticAndNonStaticMethods.cs" />
+    <Compile Include="TryCatch.cs" />
     <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>

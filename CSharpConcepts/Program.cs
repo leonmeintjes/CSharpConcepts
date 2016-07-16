@@ -41,6 +41,37 @@ namespace CSharpConcepts
             //Called directly from the class
             double thirdAnswer = StaticAndNonStaticMethods.StaticMethod("200");
             
+            //Handling exceptions - example of try catch block
+            TryCatch thisTryCatch = new TryCatch();
+            thisTryCatch.Work();
+
+            //Collections and arrays
+            //Array Example
+            CollectionsArraysListsDictionaries ThisClass = new CollectionsArraysListsDictionaries();
+            
+
+            //Interfaces - Exmaples and demo
+            Console.WriteLine("Document 1 is of class Document");
+            Console.WriteLine("-------------------------------");
+            Document doc1 = new Document();
+            doc1.Reformat("MyFile1");
+            doc1.Read("MyFile1");
+            doc1.Write("MyFile1");
+            doc1.Speak();
+
+            Console.WriteLine("Document 2 is of interface IStorable");
+            Console.WriteLine("------------------------------------");
+            IStorable doc2 = new Document();
+            doc2.Read("MyFile2");
+            doc2.Write("MyFile2");
+            //doc2.Speak(); cannot call this method as it does not belong to IStorable
+
+            Console.WriteLine("Document 2 is of interface IRecording");
+            Console.WriteLine("------------------------------------");
+            IRecording doc3 = new Document();
+            doc3.Speak();
+            //doc3.Read("MyFile3"); cannot call this method as it does not belong to IRecording
+
 
 
             Console.ReadLine();
