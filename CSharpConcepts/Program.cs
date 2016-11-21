@@ -66,11 +66,95 @@ namespace CSharpConcepts
             doc2.Write("MyFile2");
             //doc2.Speak(); cannot call this method as it does not belong to IStorable
 
-            Console.WriteLine("Document 2 is of interface IRecording");
+            Console.WriteLine("Document 3 is of interface IRecording");
             Console.WriteLine("------------------------------------");
             IRecording doc3 = new Document();
             doc3.Speak();
             //doc3.Read("MyFile3"); cannot call this method as it does not belong to IRecording
+
+            //Abstract classes : Example
+            //We have an abstract class called Control, both MyButton and MyListbox inherit from 
+            //Control and therefore must override the method called Draw() as set in the Control class
+            //Porpoerties of Abstract Classes
+            //-Cannot be instatiated 
+            //-Contains at least one abstract method
+            //-Serves as a base class
+
+            Console.WriteLine("Abstract Classes");
+            Console.WriteLine("----------------");
+            List<Control> controls = new List<Control>();
+            MyButton button = new MyButton(0,100,"Click Me");
+            MyListBox listbox = new MyListBox(100,300,new List<string>());
+            MyButton cancelButton = new MyButton(150,100,"Cancel");
+            controls.Add(button);
+            controls.Add(listbox);
+            controls.Add(cancelButton);
+
+            foreach (Control control in controls)
+            {
+             control.Draw();    
+            }
+
+
+            //Important operators
+            //nullable integer
+            int? ThisX = null;
+            Console.WriteLine($"x is {ThisX}");
+
+            //count will only return something if there is somehting otherwise null
+            List<string> thisauthors = null;
+            int? ThisCount = thisauthors?.Count;
+
+            //Ternary operator
+            string thismessage = ThisCount == null
+                ? "count is null"
+                : "count is not null";
+            Console.WriteLine($"Message is {thismessage}");
+
+            //coalescant control - if null then return zero as integer in this case cannot be null
+            int howMany = thisauthors?.Count ?? 0;
+            Console.WriteLine($"howmany = {howMany}");
+
+            //not null check
+            thisauthors = new List<string>() { "Author one", "Author two" };
+            howMany = thisauthors?.Count ?? 0;
+            Console.WriteLine($"howmany is {howMany}");
+
+            //LINQ examples
+            //Any 
+            var listOne = new List<int>() { 1, 2, 3, 4, 5 };
+            var listTwo = new List<int>();
+
+            bool hasAny = listOne.Any();
+            bool hasAnyTwo = listTwo.Any();
+
+            Console.WriteLine($"Has Any 1 equals {hasAny}");
+            Console.WriteLine($"Has Any 2 equals {hasAnyTwo}");
+
+            //Lamda expression within the Any 
+            bool hasThree = listOne.Any(x => x == 3);
+            bool hasFive = listTwo.Any(x => x == 5);
+
+            Console.WriteLine($"Has 3 in list one is {hasThree}");
+            Console.WriteLine($"Has 5 in list one is {hasFive}");
+
+            //Take 
+            var takeFive = listOne.Take(5)
+            .Select(x => x * 10);
+            foreach (int value in takeFive)
+            {
+                Console.WriteLine($"Value multiplied by 10 is {value}");
+            }
+
+
+            //Distinct --> Non duplicated numbers / objects in the list
+            var listWithDuplicates = new List<int> { 1, 1, 1, 2, 3, 4, 5, 6, 6, 7, 8, 7, 8, 9 };
+            var distinctList = listWithDuplicates.Distinct();
+            foreach (int ValueDistinct in distinctList)
+            {
+                Console.WriteLine($"Number if distinct list{ValueDistinct}");
+            }
+               
 
 
 

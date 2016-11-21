@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control.cs" />
     <Compile Include="ClassConstructors.cs" />
     <Compile Include="CollectionsArraysListsDictionaries.cs" />
     <Compile Include="Document.cs" />
@@ -51,6 +52,8 @@
     <Compile Include="IStorable.cs" />
     <Compile Include="Memo.cs" />
     <Compile Include="MethodOverloading.cs" />
+    <Compile Include="MyButton.cs" />
+    <Compile Include="MyListBox.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
