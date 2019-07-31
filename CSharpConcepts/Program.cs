@@ -154,9 +154,22 @@ namespace CSharpConcepts
             {
                 Console.WriteLine($"Number if distinct list{ValueDistinct}");
             }
-               
 
-
+            // Linq Where function  - Filters
+            List<string> fruits = new List<string> { "apple", "passionfruit", "banana", "mango","orange", "blueberry", "grape", "strawberry" };
+            IEnumerable<string> query = fruits.Where(fruit => fruit.Length < 6);
+            foreach (string fruit in query)
+            {
+                Console.WriteLine(fruit);
+            }
+            
+            // LINQ select - looping and populated lists Ienumerable objects
+            List<string> Newquery = new List<string>();
+            Newquery = fruits.Select((fruit, fruitindex) => {
+                Console.WriteLine($"The values are {fruit}");
+                return fruit;
+            }).ToList();
+            
 
             Console.ReadLine();
 
