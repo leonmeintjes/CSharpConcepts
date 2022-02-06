@@ -37,7 +37,10 @@ namespace CSharpConcepts
             {
                 try
                 {
-                    Console.WriteLine($"Person in position {j.ToString()} is {people[j].Name} {people[j].Surname}");
+                    if (people[j] != null)
+                    {
+                        Console.WriteLine($"Person in position {j.ToString()} is {people[j].Name} {people[j].Surname}");
+                    }
                 }
                 catch (Exception)
                 {
@@ -53,7 +56,10 @@ namespace CSharpConcepts
             {
                 try
                 {
-                    Console.WriteLine($"Person is {ThisPerson.Name} {ThisPerson.Surname}");
+                    if (ThisPerson != null)
+                    {
+                        Console.WriteLine($"Person is {ThisPerson.Name} {ThisPerson.Surname}");
+                    }
                 }
                 catch (Exception)
                 {
